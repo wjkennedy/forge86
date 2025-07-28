@@ -1,5 +1,6 @@
 modules:
-  macro:
+  confluence:macro:
+
     - key: wasm-emulator
       resource: main
       resolver:
