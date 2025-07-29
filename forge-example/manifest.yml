@@ -1,5 +1,6 @@
 modules:
-  macro:
+
+  confluence:macro:
     - key: wasm-emulator
       resource: main
       resolver:
@@ -12,10 +13,9 @@ modules:
       handler: index.handler
 resources:
   - key: main
-    path: static
+    path: static/index.html
 app:
   id: ari:cloud:ecosystem::app-template-id
-runtime: nodejs18.x
 permissions:
   scopes:
     - read:confluence-content.summary
