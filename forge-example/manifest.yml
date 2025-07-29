@@ -15,6 +15,7 @@ resources:
     path: static/index.html
 app:
   id: ari:cloud:ecosystem::app-template-id
+  runtime: nodejs18.x
 permissions:
   scopes:
     - read:confluence-content.summary
