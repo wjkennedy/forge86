@@ -1,0 +1,9 @@
+{
+  "name": "forge-v86-example",
+  "version": "0.1.0",
+  "description": "Forge example embedding v86",
+  "main": "src/index.js",
+  "dependencies": {
+    "@forge/resolver": "^1.6.0"
+  }
+}
