@@ -13,10 +13,9 @@ modules:
 resources:
   - key: main
     path: static
-
 app:
   id: ari:cloud:ecosystem::app-template-id
-  runtime: nodejs18.x
+  runtime: nodejs22.x
 permissions:
   scopes:
     - read:confluence-content.summary
