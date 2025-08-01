@@ -13,6 +13,7 @@ modules:
 resources:
   - key: main
     path: static/index.html
+
 app:
   id: ari:cloud:ecosystem::app-template-id
   runtime: nodejs18.x
