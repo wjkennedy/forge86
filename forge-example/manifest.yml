@@ -12,7 +12,7 @@ modules:
       handler: index.handler
 resources:
   - key: main
-    path: static/index.html
+    path: static
 
 app:
   id: ari:cloud:ecosystem::app-template-id
