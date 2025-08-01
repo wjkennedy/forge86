@@ -12,8 +12,8 @@ modules:
       handler: index.handler
 resources:
   - key: main
-    path: static
-    type: static
+    path: static/index.html
+
 app:
   id: ari:cloud:ecosystem::app-template-id
   runtime: nodejs18.x
