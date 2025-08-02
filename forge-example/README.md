@@ -26,4 +26,3 @@ ForgeReconciler.render(
   </React.StrictMode>
 );
 ```
-
