@@ -4,7 +4,8 @@ modules:
       resource: main
       resolver:
         function: resolver
-      render: native
+      render: custom
+
       title: WASM Emulator
       description: Run a PC emulator inside Confluence
   function:
@@ -12,7 +13,7 @@ modules:
       handler: index.handler
 resources:
   - key: main
-    path: static/index.html
+    path: static
 app:
   id: ari:cloud:ecosystem::app/a25f6af5-720e-42ee-8c5a-44ac04deab48
   runtime:

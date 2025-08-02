@@ -2,7 +2,7 @@
 
 This directory contains a minimal Atlassian Forge app that embeds the `v86` WASM PC emulator in a Confluence macro.
 
-The `static` directory contains `index.html`, which loads `libv86.js` from a CDN and starts an instance using the provided BIOS and disk images. See `manifest.yml` for the module definitions.
+The macro renders a Custom UI resource declared in `manifest.yml`. The `static` directory provides `index.html`, which loads `libv86.js` from a CDN and starts an instance using the provided BIOS and disk images.
 
 You can also build a richer UI using Forge's React bindings. The snippet below shows how to render a full page app:
 
@@ -26,4 +26,3 @@ ForgeReconciler.render(
   </React.StrictMode>
 );
 ```
-=======
