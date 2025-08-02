@@ -1,0 +1,22 @@
+modules:
+  macro:
+    - key: wasm-emulator
+      resource: main
+      resolver:
+        function: resolver
+      render: custom
+      title: WASM Emulator
+      description: Run a PC emulator inside Confluence
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static
+app:
+  id: ari:cloud:ecosystem::app/a25f6af5-720e-42ee-8c5a-44ac04deab48
+  runtime:
+    name: nodejs22.x
+permissions:
+  scopes:
+    - read:confluence-content.summary
