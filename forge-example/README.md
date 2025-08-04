@@ -32,4 +32,21 @@ ForgeReconciler.render(
 1. Run `forge deploy --environment development` to build and upload the app.
 2. Install it on your site with `forge install --product confluence --site <your-domain>.atlassian.net --environment development`.
 3. Edit a Confluence page and insert the **WASM Emulator** macro to launch the virtual machine.
+4. To load the macro as a full page, combine the app ID from `manifest.yml` with the environment ID returned by `forge environments list`:
+
+   ```
+   https://<your-domain>.atlassian.net/wiki/full-page/<app-id>/<environment-id>
+   ```
+
+   The snippet below prints the full URL for the development environment:
+
+   ```bash
+   APP_ID=$(grep '^  id:' manifest.yml | awk -F/ '{print $NF}')
+   ENV_ID=$(forge environments list | awk '/development/ {print $4}')
+   echo "https://<your-domain>.atlassian.net/wiki/full-page/$APP_ID/$ENV_ID"
+   ```
+
+   For the provided app ID and a sample environment ID, the full page URL would be:
+
+   `https://a9data.atlassian.net/wiki/full-page/a25f6af5-720e-42ee-8c5a-44ac04deab48/4d9e7e75-28a4-45a8-9991-b6316580988d`
 
