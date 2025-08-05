@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Forge WASM Emulator</title>
+    <style>
+      html, body, #screen_container { height: 100%; margin: 0; }
+    </style>
+    <!-- Pre-built v86 from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/v86@0.5/build/libv86.js"></script>
+    <!-- Forge bridge for invoking backend resolvers -->
+    <script src="https://connect-cdn.atl-paas.net/all.js"></script>
+  </head>
+  <body>
+    <div id="screen_container"></div>
+    <script>
+      async function start() {
+        const files = await AP.invoke('getAttachmentUrls');
+        const emulator = new V86({
+          wasm_path: files['v86.wasm'],
+          bios: { url: files['seabios.bin'] },
+          vga_bios: { url: files['vgabios.bin'] },
+          cdrom: { url: files['linux.iso'] },
+          autostart: true,
+          screen_container: document.getElementById('screen_container'),
+        });
+      }
+      start();
+    </script>
+  </body>
+</html>
