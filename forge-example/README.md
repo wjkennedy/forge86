@@ -13,6 +13,7 @@ Upload the following files as attachments to the page before inserting the macro
 
 When you type `/doom` on a page, Confluence offers the **Doom** macro. The client invokes the resolver to obtain absolute download URLs for the attachments and passes them to the emulator.
 
+
 You can also build a richer UI using Forge's React bindings. The snippet below shows how to render a full page app:
 
 ```javascript
@@ -41,6 +42,7 @@ ForgeReconciler.render(
 1. Run `forge deploy --environment development` to build and upload the app.
 2. Install it on your site with `forge install --product confluence --site <your-domain>.atlassian.net --environment development`.
 3. Edit a Confluence page and insert the **Doom** macro to launch the virtual machine using the attachments.
+
 4. To load the macro as a full page, combine the app ID from `manifest.yml` with the environment ID returned by `forge environments list`:
 
    ```

@@ -1,12 +1,14 @@
 modules:
   macro:
     - key: doom-emulator
+
       resource: main
       resolver:
         function: resolver
       render: custom
       title: Doom
       description: Load a WASM PC emulator from page attachments
+
   function:
     - key: resolver
       handler: index.handler

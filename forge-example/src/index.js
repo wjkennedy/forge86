@@ -1,6 +1,7 @@
 import Resolver from '@forge/resolver';
 import api, { route } from '@forge/api';
 
+
 const resolver = new Resolver();
 
 // Basic resolver that simply returns context information.
@@ -24,5 +25,3 @@ resolver.define('getAttachmentUrls', async (req) => {
   }
   return files;
 });
-
-export const handler = resolver.getDefinitions();
