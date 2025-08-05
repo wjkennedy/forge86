@@ -49,4 +49,3 @@ ForgeReconciler.render(
    For the provided app ID and a sample environment ID, the full page URL would be:
 
    `https://a9data.atlassian.net/wiki/full-page/a25f6af5-720e-42ee-8c5a-44ac04deab48/4d9e7e75-28a4-45a8-9991-b6316580988d`
-
