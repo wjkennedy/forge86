@@ -1,12 +1,14 @@
 modules:
   macro:
-    - key: wasm-emulator
+    - key: doom-emulator
+
       resource: main
       resolver:
         function: resolver
       render: custom
-      title: WASM Emulator
-      description: Run a PC emulator inside Confluence
+      title: Doom
+      description: Load a WASM PC emulator from page attachments
+
   function:
     - key: resolver
       handler: index.handler
@@ -19,4 +21,4 @@ app:
     name: nodejs22.x
 permissions:
   scopes:
-    - read:confluence-content.summary
+    - read:confluence-content.all

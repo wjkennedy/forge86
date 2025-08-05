@@ -4,6 +4,7 @@
   "description": "Forge example embedding v86",
   "main": "src/index.js",
   "dependencies": {
+    "@forge/api": "^2.17.0",
     "@forge/resolver": "^1.6.0"
   }
 }
