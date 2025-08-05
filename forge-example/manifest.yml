@@ -5,7 +5,6 @@ modules:
       resolver:
         function: resolver
       render: custom
-
       title: WASM Emulator
       description: Run a PC emulator inside Confluence
   function:
